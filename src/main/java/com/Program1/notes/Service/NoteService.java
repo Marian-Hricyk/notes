@@ -1,12 +1,14 @@
 package com.Program1.notes.Service;
 
 import com.Program1.notes.entyty.Note;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class NoteService {
   private final Map<Long, Note> noteMap = new HashMap<>();
 
