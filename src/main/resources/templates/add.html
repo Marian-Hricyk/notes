@@ -2,25 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Note</title>
+    <title>Add Note</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container mt-5">
-    <h1>Edit Note</h1>
+    <h1>Add Note</h1>
 
-    <form th:action="@{/note/edit}" method="post">
-        <input type="hidden" name="id" th:value="${note.id}">
+    <form th:action="@{/note/add}" method="post">
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" name="title" th:value="${note.title}">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
         </div>
         <div class="form-group">
             <label for="content">Content:</label>
-            <textarea class="form-control" id="content" name="content" th:text="${note.content}"></textarea>
+            <textarea class="form-control" id="content" name="content" placeholder="Enter content"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="submit" class="btn btn-primary">Add Note</button>
     </form>
 
 </div>

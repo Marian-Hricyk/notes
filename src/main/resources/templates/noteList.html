@@ -13,15 +13,17 @@
     <ul th:if="${notes}">
         <li th:each="note : ${notes}">
             <p th:text="${note.title} + ' - ' + ${note.content}"></p>
-            <a th:href="@{/note/edit(id=${note.id})}" class="btn btn-primary">Edit</a>
+
             <form th:action="@{/note/delete}" method="post" class="d-inline">
                 <input type="hidden" name="id" th:value="${note.id}">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
+
+            <a th:href="@{/note/edit/{id}(id=${note.id})}" class="btn btn-primary">Edit</a>
         </li>
     </ul>
 
-    <a href="/note/edit" class="btn btn-success">Add Note</a>
+    <a th:href="@{/note/add}" class="btn btn-success">Add Note</a>
 
 </div>
 
