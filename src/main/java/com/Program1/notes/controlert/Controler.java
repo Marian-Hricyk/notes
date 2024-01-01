@@ -1,7 +1,7 @@
 package com.Program1.notes.controlert;
 
 import lombok.extern.slf4j.Slf4j;
-import com.Program1.notes.Service.NoteService;
+import com.Program1.notes.service.NoteService;
 import com.Program1.notes.entyty.Note;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

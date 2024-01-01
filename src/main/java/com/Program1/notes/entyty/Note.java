@@ -1,8 +1,15 @@
 package com.Program1.notes.entyty;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Note {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+  @Column
   private String title;
+  @Column
   private String content;
 
   public Long getId() {
