@@ -33,6 +33,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.30'
 	implementation 'com.h2database:h2:2.2.220'
 	implementation 'org.flywaydb:flyway-core:9.22.3'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
 tasks.named('test') {
